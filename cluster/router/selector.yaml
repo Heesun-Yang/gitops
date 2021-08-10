@@ -5,3 +5,7 @@ metadata:
   namespace: openshift-ingress-operator
 spec:
   replicas: 3
+  nodePlacement:
+    nodeSelector:
+      matchLabels:
+        node-role.kubernetes.io/master: ""
